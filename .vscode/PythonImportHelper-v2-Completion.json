@@ -1,0 +1,56 @@
+[
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "values",
+        "kind": 5,
+        "importPath": "day1.1",
+        "description": "day1.1",
+        "peekOfCode": "values = []\nwith open(\"day1.txt\") as file:\n    for line in file:\n        values.append(line.rstrip())\nsum = 0\nfor line in values:\n    digits_only = re.sub('\\D','',line)\n    sum += int(digits_only[0] + digits_only[-1])\nprint(sum)",
+        "detail": "day1.1",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 5,
+        "importPath": "day1.1",
+        "description": "day1.1",
+        "peekOfCode": "sum = 0\nfor line in values:\n    digits_only = re.sub('\\D','',line)\n    sum += int(digits_only[0] + digits_only[-1])\nprint(sum)",
+        "detail": "day1.1",
+        "documentation": {}
+    },
+    {
+        "label": "values",
+        "kind": 5,
+        "importPath": "day1.2",
+        "description": "day1.2",
+        "peekOfCode": "values = []\nwith open(\"day1.txt\") as file:\n    for line in file:\n        values.append(line.rstrip())\nsum = 0\nreplacements_dictionary = {'one' : 'on1e', 'two' : 'tw2o', 'three' : 'thr3e','four': 'fo4ur', 'five':'fi5ve','six': 'si6x','seven': 'sev7en','eight' : 'ei8ght','nine':'ni9ne'}\nfor line in values:\n    for key,value in replacements_dictionary.items():\n        line = line.replace(key, value)\n    print(line)",
+        "detail": "day1.2",
+        "documentation": {}
+    },
+    {
+        "label": "sum",
+        "kind": 5,
+        "importPath": "day1.2",
+        "description": "day1.2",
+        "peekOfCode": "sum = 0\nreplacements_dictionary = {'one' : 'on1e', 'two' : 'tw2o', 'three' : 'thr3e','four': 'fo4ur', 'five':'fi5ve','six': 'si6x','seven': 'sev7en','eight' : 'ei8ght','nine':'ni9ne'}\nfor line in values:\n    for key,value in replacements_dictionary.items():\n        line = line.replace(key, value)\n    print(line)\n    digits_only = re.sub('\\D','',line)\n    sum += int(digits_only[0] + digits_only[-1])\nprint(sum)",
+        "detail": "day1.2",
+        "documentation": {}
+    },
+    {
+        "label": "replacements_dictionary",
+        "kind": 5,
+        "importPath": "day1.2",
+        "description": "day1.2",
+        "peekOfCode": "replacements_dictionary = {'one' : 'on1e', 'two' : 'tw2o', 'three' : 'thr3e','four': 'fo4ur', 'five':'fi5ve','six': 'si6x','seven': 'sev7en','eight' : 'ei8ght','nine':'ni9ne'}\nfor line in values:\n    for key,value in replacements_dictionary.items():\n        line = line.replace(key, value)\n    print(line)\n    digits_only = re.sub('\\D','',line)\n    sum += int(digits_only[0] + digits_only[-1])\nprint(sum)",
+        "detail": "day1.2",
+        "documentation": {}
+    }
+]
