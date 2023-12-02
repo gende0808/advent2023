@@ -52,5 +52,50 @@
         "peekOfCode": "replacements_dictionary = {'one' : 'on1e', 'two' : 'tw2o', 'three' : 'thr3e','four': 'fo4ur', 'five':'fi5ve','six': 'si6x','seven': 'sev7en','eight' : 'ei8ght','nine':'ni9ne'}\nfor line in values:\n    for key,value in replacements_dictionary.items():\n        line = line.replace(key, value)\n    print(line)\n    digits_only = re.sub('\\D','',line)\n    sum += int(digits_only[0] + digits_only[-1])\nprint(sum)",
         "detail": "day1.2",
         "documentation": {}
+    },
+    {
+        "label": "values",
+        "kind": 5,
+        "importPath": "day2.1",
+        "description": "day2.1",
+        "peekOfCode": "values = []\nwith open(\"day2.txt\") as file:\n    for line in file:\n        values.append(line.rstrip())\npuzzle_answer = 0\ngame_number = 1\nfor game in values:\n    game_is_valid = True\n    for grabs in re.split(\";\",re.sub(r'^.*?: ', '', game)):\n        blue =green = red = 0",
+        "detail": "day2.1",
+        "documentation": {}
+    },
+    {
+        "label": "puzzle_answer",
+        "kind": 5,
+        "importPath": "day2.1",
+        "description": "day2.1",
+        "peekOfCode": "puzzle_answer = 0\ngame_number = 1\nfor game in values:\n    game_is_valid = True\n    for grabs in re.split(\";\",re.sub(r'^.*?: ', '', game)):\n        blue =green = red = 0\n        for grab in grabs.split(\", \"):\n            if \"blue\" in grab:\n                blue += int(re.sub('\\\\D','',grab))\n            else:",
+        "detail": "day2.1",
+        "documentation": {}
+    },
+    {
+        "label": "game_number",
+        "kind": 5,
+        "importPath": "day2.1",
+        "description": "day2.1",
+        "peekOfCode": "game_number = 1\nfor game in values:\n    game_is_valid = True\n    for grabs in re.split(\";\",re.sub(r'^.*?: ', '', game)):\n        blue =green = red = 0\n        for grab in grabs.split(\", \"):\n            if \"blue\" in grab:\n                blue += int(re.sub('\\\\D','',grab))\n            else:\n                if \"green\" in grab:",
+        "detail": "day2.1",
+        "documentation": {}
+    },
+    {
+        "label": "values",
+        "kind": 5,
+        "importPath": "day2.2",
+        "description": "day2.2",
+        "peekOfCode": "values = []\nwith open(\"day2.txt\") as file:\n    for line in file:\n        values.append(line.rstrip())\npuzzle_answer = 0\nfor game in values:\n    game_is_valid = True\n    blue = green = red = 0\n    for grabs in re.split(\";\",re.sub(r'^.*?: ', '', game)):\n        for grab in grabs.split(\", \"):",
+        "detail": "day2.2",
+        "documentation": {}
+    },
+    {
+        "label": "puzzle_answer",
+        "kind": 5,
+        "importPath": "day2.2",
+        "description": "day2.2",
+        "peekOfCode": "puzzle_answer = 0\nfor game in values:\n    game_is_valid = True\n    blue = green = red = 0\n    for grabs in re.split(\";\",re.sub(r'^.*?: ', '', game)):\n        for grab in grabs.split(\", \"):\n            value = int(re.sub('\\\\D','',grab))\n            if \"blue\" in grab:\n                if value > blue:\n                    blue = value",
+        "detail": "day2.2",
+        "documentation": {}
     }
 ]
